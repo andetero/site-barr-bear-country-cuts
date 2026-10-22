@@ -66,9 +66,34 @@ footer{border-top:1px solid var(--line);padding:22px 24px 30px;max-width:980px;m
  .acts .btn{width:100%;text-align:center}
  .sticky{display:block;position:fixed;left:12px;right:12px;bottom:12px;text-align:center;z-index:9;box-shadow:0 10px 28px var(--shadow)}
 }
+picture.ph{display:block}picture.ph img{display:block;width:100%;height:auto}
+.lead-ph{padding:0 0 10px}
+.lead-ph picture{border-radius:22px;overflow:hidden;border:2px solid var(--navy)}
+.lead-ph picture img{height:clamp(220px,40vw,460px);object-fit:cover}
+.menu.svc li{display:block;padding:14px 0;border-bottom:2px dotted var(--line)}
+.menu.svc li::after{display:none}
+.menu.svc li span{display:block;font-weight:400;color:var(--muted);font-size:.98rem;margin-top:2px}
+.about{padding:40px 0 60px}
+.about .g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:start}
+.about picture{border-radius:18px;overflow:hidden}
+.about .txt p{font-size:1.15rem;margin:0 0 14px}
+.about .txt picture{margin-top:26px;width:82%;margin-left:auto}
+.find .plain{margin-top:24px;border-radius:14px;overflow:hidden}
+.find .area{color:var(--muted)}
+.last{background:var(--navy);color:var(--navy-ink);padding:46px 0;border-top:3px solid var(--red)}
+.last .g{display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap}
+.last h2{margin:0 0 4px}
+.last p{margin:0}
+.last .btn{background:var(--navy-ink);color:var(--navy);border-color:var(--navy-ink)}
+.last .btn:hover{background:transparent;color:var(--navy-ink)}
+.last .btn.o{background:transparent;color:var(--navy-ink)}
+.last .btn.o:hover{background:var(--navy-ink);color:var(--navy)}
+@media (max-width:760px){.about .g{grid-template-columns:1fr;gap:26px}.about .txt picture{width:100%}}
+@media (max-width:640px){.last .btn{width:100%;text-align:center}}
 </style>
 </head>
 <body>
+<!-- Placeholder photos: royalty-free stock images (Unsplash License, details in CREDITS.md). They are not of this business. Replace them with the client's own real photos before handoff. -->
 <div class="pole" aria-hidden="true"></div>
 <main>
 <section class="hero" aria-labelledby="h">
@@ -88,16 +113,18 @@ footer{border-top:1px solid var(--line);padding:22px 24px 30px;max-width:980px;m
  </div>
 </section>
 
+<div class="lead-ph"><div class="w"><picture class="ph"><source type="image/webp" srcset="img/hero.webp"><img src="img/hero.jpg" width="1600" height="900" alt="Hair clippers, scissors and a comb laid out on a slate board" fetchpriority="high" decoding="async"></picture></div></div>
+
 <section class="chair" aria-labelledby="c-h">
  <div class="w">
   <div class="g">
    <div>
     <h2 id="c-h">At the shop</h2>
-    <ul class="menu">
-     <li>Traditional haircuts</li>
-     <li>Barber services</li>
-     <li>Hair salon services</li>
-     <li>Beauty services</li>
+    <ul class="menu svc">
+     <li>Traditional haircuts<span>Classic barber shop haircuts.</span></li>
+     <li>Barber services<span>Everyday barber shop work.</span></li>
+     <li>Hair salon services<span>Salon hair services alongside the barber chair.</span></li>
+     <li>Beauty services<span>Other beauty and salon needs.</span></li>
     </ul>
     <p class="src">As listed on the shop&rsquo;s Facebook page and Google listing.</p>
    </div>
@@ -109,7 +136,21 @@ footer{border-top:1px solid var(--line);padding:22px 24px 30px;max-width:980px;m
      <li>Sun &amp; Mon<span>Closed</span></li>
     </ul>
     <p class="src">As listed on Google.</p>
-    <p>Customers mention skilled cuts, a friendly welcome and fair prices. Owned by LeAnn.</p>
+    <p>Customers mention skilled cuts, a friendly welcome and fair prices.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="about" aria-labelledby="a-h">
+ <div class="w">
+  <div class="g">
+   <picture class="ph"><source type="image/webp" srcset="img/a.webp"><img src="img/a.jpg" width="900" height="1200" alt="Barber scissors and a comb resting on a blue counter" loading="lazy" decoding="async"></picture>
+   <div class="txt">
+    <h2 id="a-h">About the shop</h2>
+    <p>Barr Bear Country Cuts is a locally owned and operated barber shop on Comanche Street in Kiowa. Along with traditional haircuts, the shop handles salon and beauty services.</p>
+    <p>It holds a 5.0-star rating from 38 Google reviews. Owned by LeAnn.</p>
+    <picture class="ph"><source type="image/webp" srcset="img/b.webp"><img src="img/b.jpg" width="900" height="720" alt="Scissors, clippers, clipper guards, a razor and a brush laid out on an orange surface" loading="lazy" decoding="async"></picture>
    </div>
   </div>
  </div>
@@ -123,10 +164,23 @@ footer{border-top:1px solid var(--line);padding:22px 24px 30px;max-width:980px;m
     <address>312 Comanche St<br>Kiowa, CO 80117</address>
     <p><a href="tel:+13039058246">(303) 905-8246</a></p>
     <p>Tuesday to Friday 8 AM &ndash; 5 PM, Saturday 7 AM &ndash; 2 PM</p>
+    <p class="area">In Kiowa, the county seat of Elbert County, Colorado.</p>
     <p><a href="https://www.facebook.com/p/Barr-Bear-Country-Cuts-and-MORE-100069513674143/" target="_blank" rel="noopener">Barr Bear Country Cuts and MORE on Facebook</a></p>
-    <p style="margin-top:18px"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=312%20Comanche%20St%2C%20Kiowa%2C%20CO%2080117" target="_blank" rel="noopener">Directions</a></p>
+    <div class="plain"><picture class="ph"><source type="image/webp" srcset="img/c.webp"><img src="img/c.jpg" width="900" height="560" alt="A windmill on open prairie with mountains far off" loading="lazy" decoding="async"></picture></div>
    </div>
    <iframe title="Map of 312 Comanche St, Kiowa, CO" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=312%20Comanche%20St%2C%20Kiowa%2C%20CO%2080117&amp;z=15&amp;output=embed"></iframe>
+  </div>
+ </div>
+</section>
+
+<section class="last" aria-labelledby="l-h">
+ <div class="w">
+  <div class="g">
+   <div><h2 id="l-h" class="serif">Come in for a cut</h2><p>312 Comanche St, Kiowa &middot; (303) 905-8246</p></div>
+   <div class="acts">
+    <a class="btn" href="tel:+13039058246">Call (303) 905-8246</a>
+    <a class="btn o" href="https://www.google.com/maps/dir/?api=1&amp;destination=312%20Comanche%20St%2C%20Kiowa%2C%20CO%2080117" target="_blank" rel="noopener">Directions</a>
+   </div>
   </div>
  </div>
 </section>
